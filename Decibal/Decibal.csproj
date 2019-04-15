@@ -79,6 +79,14 @@
     <Content Include="Pictures\Database.PNG" />
     <Content Include="Pictures\hardware.PNG" />
     <Content Include="Pictures\overview.PNG" />
+    <Content Include="Charger1.aspx" />
+    <Content Include="Charger2.aspx" />
+    <Content Include="Charger3.aspx" />
+    <Content Include="Charger4.aspx" />
+    <Content Include="Overview.aspx" />
+    <Content Include="Hardware.aspx" />
+    <Content Include="Algorithm.aspx" />
+    <Content Include="Contact.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.master" />
@@ -86,6 +94,7 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <None Include="decibal - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\decibal - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,6 +120,62 @@
     </Compile>
     <Compile Include="Site.master.designer.cs">
       <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Charger1.aspx.cs">
+      <DependentUpon>Charger1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charger1.aspx.designer.cs">
+      <DependentUpon>Charger1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charger2.aspx.cs">
+      <DependentUpon>Charger2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charger2.aspx.designer.cs">
+      <DependentUpon>Charger2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charger3.aspx.cs">
+      <DependentUpon>Charger3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charger3.aspx.designer.cs">
+      <DependentUpon>Charger3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charger4.aspx.cs">
+      <DependentUpon>Charger4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charger4.aspx.designer.cs">
+      <DependentUpon>Charger4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Overview.aspx.cs">
+      <DependentUpon>Overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Overview.aspx.designer.cs">
+      <DependentUpon>Overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware.aspx.cs">
+      <DependentUpon>Hardware.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hardware.aspx.designer.cs">
+      <DependentUpon>Hardware.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Algorithm.aspx.cs">
+      <DependentUpon>Algorithm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Algorithm.aspx.designer.cs">
+      <DependentUpon>Algorithm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

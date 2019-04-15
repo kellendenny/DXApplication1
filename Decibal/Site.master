@@ -14,9 +14,22 @@
                 <h1>D.E.C.I.B.A.L. Smart Electricity Grids Spring 2019 Term project Team#8</h1>
                 <dx:ASPxMenu ID="HeaderMenu" runat="server" ItemAutoWidth="False" Width="100%">
                     <items>
-                        <dx:MenuItem Text="Home"></dx:MenuItem>
-                        <dx:MenuItem Text="About"></dx:MenuItem>
-                        <dx:MenuItem Text="Contact"></dx:MenuItem>
+                        <dx:MenuItem Text="Home" NavigateUrl="~/Default.aspx"></dx:MenuItem>
+                        <dx:MenuItem Text="Dashboard" NavigateUrl="~/Overview.aspx"></dx:MenuItem>
+                        <dx:MenuItem Text="User Management" NavigateUrl="~/Users.aspx"></dx:MenuItem>
+                        <dx:MenuItem Text="Chargers">
+                            <Items>
+                                <dx:MenuItem Text="Charger 1" NavigateUrl="~/Charger1.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Charger 2" NavigateUrl="~/Charger2.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Charger 3" NavigateUrl="~/Charger3.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Charger 4" NavigateUrl="~/Charger4.aspx">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="Contact" NavigateUrl="~/Contact.aspx"></dx:MenuItem>
                     </items>
                     <border borderwidth="0px" />
                     <paddings padding="0px" />
