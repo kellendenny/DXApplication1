@@ -17,6 +17,8 @@
                         <dx:MenuItem Text="Home" NavigateUrl="~/Default.aspx"></dx:MenuItem>
                         <dx:MenuItem Text="Dashboard" NavigateUrl="~/Overview.aspx"></dx:MenuItem>
                         <dx:MenuItem Text="User Management" NavigateUrl="~/Users.aspx"></dx:MenuItem>
+                        <dx:MenuItem Name="Transactions" NavigateUrl="~/Transactions.aspx" Text="Transactions">
+                        </dx:MenuItem>
                         <dx:MenuItem Text="Chargers">
                             <Items>
                                 <dx:MenuItem Text="Charger 1" NavigateUrl="~/Charger1.aspx">

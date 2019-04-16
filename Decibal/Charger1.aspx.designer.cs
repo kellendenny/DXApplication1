@@ -22,6 +22,51 @@ namespace Decibal {
         protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl1;
         
         /// <summary>
+        /// ASPxGaugeControl2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl2;
+        
+        /// <summary>
+        /// ASPxGaugeControl3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl3;
+        
+        /// <summary>
+        /// ASPxGaugeControl4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl4;
+        
+        /// <summary>
+        /// ASPxGaugeControl6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl6;
+        
+        /// <summary>
+        /// ASPxGaugeControl5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl5;
+        
+        /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>

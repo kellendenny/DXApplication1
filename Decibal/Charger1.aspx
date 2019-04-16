@@ -10,26 +10,38 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="dx-justification">
         <tr>
-            <td style="text-align: center; width: 251px;">State of Charge</td>
-            <td>&nbsp;</td>
+            <td style="text-align: center; font-size: medium; font-weight: bold;" class="dxflEmptyItem_MetropolisBlue" colspan="2">CAR CHARGER NO. 1</td>
+            <td style="width: 212px; text-align: center; height: 21px; font-weight: bold; font-size: medium;">ID = 1001</td>
+            <td class="dxfm-filterViewDateCell" style="width: 191px; height: 21px"></td>
+            <td style="width: 238px; height: 21px"></td>
+            <td class="dxflEmptyItem_MetropolisBlue"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center; width: 251px; height: 20px;">State of Charge</td>
+            <td class="dxfm-filterViewDateCell" style="width: 242px; height: 20px; text-align: center;">Battery Capacity (mAh)</td>
+            <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; text-align: center; width: 212px;">Battery Voltage (Vdc)</td>
+            <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; width: 191px; text-align: center;">Battery Current (Amps)</td>
+            <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; width: 238px; text-align: center;">&nbsp;</td>
+            <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px">&nbsp;</td>
         </tr>
         <tr>
             <td class="dxspdtDesignMode" style="width: 251px">
-    <dx:ASPxGaugeControl ID="ASPxGaugeControl1" runat="server" BackColor="White" Height="262px" Value="250" Width="258px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl1_CustomCallback" ClientInstanceName="gauge">
+    <dx:ASPxGaugeControl ID="ASPxGaugeControl1" runat="server" BackColor="White" Height="262px" Value="100" Width="258px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl1_CustomCallback" ClientInstanceName="gauge" ShowLoadingPanel="False">
+        <SettingsLoadingPanel Enabled="False" />
         <ClientSideEvents EndCallback="function(s, e) { timer.Start(); }" />
         <Gauges>
             <dx:LinearGauge Bounds="0, 0, 258, 262" Name="Gauge0">
                 <scales>
-                    <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-FormatString="{0:F0}" MajorTickmark-ShapeOffset="6" MajorTickmark-ShapeType="Linear_Style11_2" MajorTickmark-TextOffset="35" MaxValue="500" MinorTickCount="4" MinorTickmark-ShapeOffset="6" MinorTickmark-ShapeType="Linear_Style11_1" Name="scale1" StartPoint="62.5, 230" Value="250">
+                    <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Silver&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-FormatString="{0:F0}" MajorTickmark-ShapeOffset="7" MajorTickmark-ShapeType="Linear_Style10_1" MajorTickmark-TextOffset="35" MaxValue="100" MinorTickCount="4" MinorTickmark-ShapeOffset="7" MinorTickmark-ShapeType="Linear_Style10_2" Name="scale1" StartPoint="62.5, 230" Value="100">
                     </dx:LinearScaleComponent>
-                    <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-FormatString="{0:F0}" MajorTickmark-ShapeOffset="-18" MajorTickmark-ShapeType="Linear_Style11_3" MajorTickmark-TextOffset="-32" MaxValue="50" MinorTickCount="4" MinorTickmark-ShapeOffset="-12" MinorTickmark-ShapeType="Linear_Style11_4" Name="scale2" StartPoint="62.5, 230">
+                    <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Silver&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-FormatString="{0:F0}" MajorTickmark-ShapeOffset="7" MajorTickmark-ShapeType="Linear_Style10_1" MajorTickmark-TextOffset="35" MaxValue="100" MinorTickCount="4" MinorTickmark-ShapeOffset="7" MinorTickmark-ShapeType="Linear_Style10_2" Name="scale2" StartPoint="62.5, 230">
                     </dx:LinearScaleComponent>
                 </scales>
                 <levels>
-                    <dx:LinearScaleLevelComponent AcceptOrder="50" LinearScale="" Name="level1" ScaleID="scale1" ShapeType="Style11" ZOrder="-50" />
+                    <dx:LinearScaleLevelComponent AcceptOrder="50" LinearScale="" Name="level1" ScaleID="scale1" ShapeType="Style10" ZOrder="-50" />
                 </levels>
                 <backgroundlayers>
-                    <dx:LinearScaleBackgroundLayerComponent AcceptOrder="-1000" LinearScale="" Name="bg1" ScaleEndPos="0.5075, 0.08" ScaleID="scale1" ScaleStartPos="0.5075, 0.92" ShapeType="Linear_Style11" ZOrder="1000" />
+                    <dx:LinearScaleBackgroundLayerComponent AcceptOrder="-1000" LinearScale="" Name="bg1" ScaleEndPos="0.5, 0.08" ScaleID="scale1" ScaleStartPos="0.5, 0.92" ShapeType="Linear_Style10" ZOrder="1000" />
                 </backgroundlayers>
             </dx:LinearGauge>
         </Gauges>
@@ -37,6 +49,95 @@
         </LayoutPadding>
     </dx:ASPxGaugeControl>
             </td>
+            <td class="dxfm-filterViewDateCell" style="width: 242px">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl2" runat="server" BackColor="White" Height="250px" Value="000,000" Width="237px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl2_CustomCallback" ClientInstanceName="gauge2" ShowLoadingPanel="False">
+                    <SettingsLoadingPanel Enabled="False" />
+                    <Gauges>
+                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 237, 250" DigitCount="6" Name="Gauge0" Padding="20, 20, 20, 20" Text="000,000">
+                            <backgroundlayers>
+                                <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="307.775, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
+                            </backgroundlayers>
+                        </dx:DigitalGauge>
+                    </Gauges>
+<LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
+                </dx:ASPxGaugeControl>
+            </td>
+            <td style="width: 212px; text-align: center;">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl3" runat="server" BackColor="White" Height="250px" Value="00,000" Width="178px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl3_CustomCallback" ClientInstanceName="gauge3" ShowLoadingPanel="False">
+                    <SettingsLoadingPanel Enabled="False" />
+                    <Gauges>
+                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 250, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20" Text="00,000">
+                            <backgroundlayers>
+                                <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="211.85, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
+                            </backgroundlayers>
+                        </dx:DigitalGauge>
+                    </Gauges>
+<LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
+                </dx:ASPxGaugeControl>
+            </td>
+            <td class="dxfm-filterViewDateCell" style="width: 191px; text-align: center;">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl4" runat="server" BackColor="White" Height="250px" Value="00,000" Width="179px" ShowLoadingPanel="False">
+                    <SettingsLoadingPanel Enabled="False" />
+                    <Gauges>
+                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 250, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20" Text="00,000">
+                            <backgroundlayers>
+                                <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="211.85, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
+                            </backgroundlayers>
+                        </dx:DigitalGauge>
+                    </Gauges>
+<LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
+                </dx:ASPxGaugeControl>
+            </td>
+            <td style="width: 238px">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="dxspdtDesignMode" style="width: 251px; text-align: center;">
+                Charge Rate (C)</td>
+            <td class="dxfm-filterViewDateCell" style="width: 242px; text-align: center;">
+                Battery Power (W)</td>
+            <td style="width: 212px">&nbsp;</td>
+            <td class="dxfm-filterViewDateCell" style="width: 191px">&nbsp;</td>
+            <td style="width: 238px">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="dxspdtDesignMode" style="width: 251px">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl6" runat="server" BackColor="White" Height="262px" Value="1" Width="258px" ShowLoadingPanel="False">
+                    <SettingsLoadingPanel Enabled="False" />
+                    <Gauges>
+                        <dx:LinearGauge Bounds="0, 0, 258, 262" Name="lGauge1">
+                            <scales>
+                                <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Silver&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-ShapeOffset="7" MajorTickmark-ShapeType="Linear_Style10_1" MajorTickmark-TextOffset="35" MaxValue="2" MinorTickCount="4" MinorTickmark-ShapeOffset="7" MinorTickmark-ShapeType="Linear_Style10_2" Name="scale1" StartPoint="62.5, 230" Value="1">
+                                </dx:LinearScaleComponent>
+                            </scales>
+                            <levels>
+                                <dx:LinearScaleLevelComponent AcceptOrder="50" LinearScale="" Name="level1" ScaleID="scale1" ShapeType="Style10" ZOrder="-50" />
+                            </levels>
+                            <backgroundlayers>
+                                <dx:LinearScaleBackgroundLayerComponent AcceptOrder="-1000" LinearScale="" Name="bg1" ScaleEndPos="0.5, 0.08" ScaleID="scale1" ScaleStartPos="0.5, 0.92" ShapeType="Linear_Style10" ZOrder="1000" />
+                            </backgroundlayers>
+                        </dx:LinearGauge>
+                    </Gauges>
+<LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
+                </dx:ASPxGaugeControl>
+            </td>
+            <td class="dxfm-filterViewDateCell" style="width: 242px; text-align: center;">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl5" runat="server" BackColor="White" Height="250px" Value="00,000" Width="178px" ShowLoadingPanel="False">
+                    <SettingsLoadingPanel Enabled="False" />
+                    <Gauges>
+                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 250, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20" Text="00,000">
+                            <backgroundlayers>
+                                <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="211.85, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
+                            </backgroundlayers>
+                        </dx:DigitalGauge>
+                    </Gauges>
+<LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
+                </dx:ASPxGaugeControl>
+            </td>
+            <td style="width: 212px">&nbsp;</td>
+            <td class="dxfm-filterViewDateCell" style="width: 191px">&nbsp;</td>
+            <td style="width: 238px">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -69,7 +170,7 @@
             <asp:Parameter Name="RecordID" Type="Int32" />
         </UpdateParameters>
     </asp:sqldatasource>
-    <dx:ASPxTimer ID="timer" runat="server" Interval="2000" ClientInstanceName="timer">
-    <ClientSideEvents Tick="function(s, e) { timer.Stop(); gauge.PerformCallback(); }" />
+    <dx:ASPxTimer ID="timer" runat="server" Interval="5000" ClientInstanceName="timer">
+    <ClientSideEvents Tick="function(s, e) { timer.Stop(); gauge.PerformCallback(); gauge2.PerformCallback(); gauge3.PerformCallback(); }" />
     </dx:ASPxTimer>
 </asp:Content>
