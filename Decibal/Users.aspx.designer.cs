@@ -10,16 +10,7 @@
 namespace Decibal {
     
     
-    public partial class WebForm1 {
-        
-        /// <summary>
-        /// ASPxGaugeControl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl1;
+    public partial class WebForm9 {
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -31,12 +22,12 @@ namespace Decibal {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// timer control.
+        /// ASPxGridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer timer;
+        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
     }
 }
