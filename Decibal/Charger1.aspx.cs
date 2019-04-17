@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using DevExpress.Web.ASPxGauges.Gauges.Linear;
 using DevExpress.Web.ASPxGauges;
 using DevExpress.Web.ASPxGauges.Gauges.Digital;
+using DevExpress.Web.ASPxGauges.Gauges.State;
 using System.Web.Routing;
 using DevExpress.Utils;
 using DevExpress.Web;
@@ -21,28 +22,48 @@ namespace Decibal
         {
             if (!IsPostBack && !IsCallback)
             {
-                UpdateGauge(1);
+                UpdateGauge(1001,6);
             }
         }
         
-        private void UpdateGauge(int gaugeNo)
+        private void UpdateGauge(int ID, int total)
         {
-            float v = GetData(gaugeNo);
-            if (gaugeNo == 1)
+            Object[] data = GetData(ID);
+            float newValue = 0;
+            string newString = "";
+            if (total >= 1)
             {
-                UpdateScaleInternal(ASPxGaugeControl1, v);
+                newValue = (float)data.GetValue(4);
+                UpdateScaleInternal(ASPxGaugeControl1, newValue);
+            }                             
+            if (total >= 2)
+            {
+                newValue = (float)data.GetValue(3);
+                UpdateScaleInternal2(ASPxGaugeControl2, newValue);
             }
-            else if (gaugeNo == 2)
+            if (total >= 3)
             {
-                UpdateScaleInternal2(ASPxGaugeControl2, v);
+                newValue = (float)data.GetValue(6);
+                UpdateScaleInternal3(ASPxGaugeControl3, newValue);
             }
-            else if (gaugeNo == 3)
+            if (total >= 4)
             {
-                UpdateScaleInternal3(ASPxGaugeControl3, v);
+                newValue = (float)data.GetValue(7);
+                UpdateScaleInternal4(ASPxGaugeControl4, newValue);
+            }
+            if (total >= 5)
+            {
+                newValue = (float)data.GetValue(8);
+                UpdateScaleInternal5(ASPxGaugeControl5, newValue);
+            }
+            if (total >= 6)
+            {
+                newString = (string)data.GetValue(5);
+                UpdateScaleInternal7(ASPxGaugeControl7, newString);
             }
         }
 
-        private float GetData(int index)
+        private Object[] GetData(int ID)
         {
             string ConString;
             SqlConnection cnn;
@@ -57,7 +78,7 @@ namespace Decibal
 
             string sql, Output = "";
 
-            sql = "Select Max(RecordID) From dbo.Chargers Where ArduinoID = 1001";
+            sql = "Select Max(RecordID) From dbo.Chargers Where ArduinoID = " + ID;
 
             command = new SqlCommand(sql, cnn);
 
@@ -73,61 +94,41 @@ namespace Decibal
 
             sql = "Select * From dbo.Chargers Where RecordID = " + Output;
 
+            Object[] values = new Object[10];
+
             command = new SqlCommand(sql, cnn);
 
-            dataReader = command.ExecuteReader();
 
-            float newValue = 0;
 
-            if (index == 1){
-                
-                Output = "";
-                float Output2;
-                while (dataReader.Read())
-                {
-                    Output2 = (float)dataReader.GetValue(4);
-                    newValue = Output2;
-                }
-
-                return newValue;
-            
-            }
-
-            else if (index == 2)
+            SqlDataReader rdr = command.ExecuteReader();
+            while (rdr.Read())
             {
-                Output = "";
-                float Output2;
-                while (dataReader.Read())
-                {
-                    Output2 = (float)dataReader.GetValue(3);
-                    newValue = Output2;
-                }
-
-                return newValue;
-            
+                // get the results of each column
+                values[0] = (int)rdr[0];
+                values[1] = 0;
+                values[2] = (int)rdr[2];
+                values[3] = (float)rdr[3];
+                values[4] = (float)rdr[4];
+                values[5] = (string)rdr[5];
+                values[6] = (float)rdr[6];
+                values[7] = (float)rdr[7];
+                values[8] = (float)rdr[8];
+                values[9] = (float)rdr[9];
             }
-
-            else if (index == 3)
-            {
-                Output = "";
-                float Output2;
-                while (dataReader.Read())
-                {
-                    Output2 = (float)dataReader.GetValue(6);
-                    newValue = Output2;
-                }
-
-                return newValue;
-            }
-
-            else
-            {
-                return newValue;
-            }
-
-            
-
+            return values;
         }
+
+           
+
+
+            
+
+
+
+
+
+
+        
         private void UpdateScaleInternal(ASPxGaugeControl gauge, float value)
         {
 
@@ -193,21 +194,120 @@ namespace Decibal
             }
         }
 
+        private void UpdateScaleInternal4(ASPxGaugeControl gauge, float value)
+        {
+
+
+            string newValue;
+            DigitalGauge oldValue2 = (DigitalGauge)gauge.Gauges[0];
+            string oldValue;
+            oldValue = oldValue2.Text;
+            //Dennis: use a random value, just for demonstration purposes.
+            //DataView dv = SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView;
+            //float newValue = Convert.ToSingle(dv.Table.Rows[0][0]);
+
+            newValue = Convert.ToString(value);
+
+            if (oldValue != newValue)
+            {
+                oldValue2.Text = newValue;
+                ((DigitalGauge)gauge.Gauges[0]).Text = oldValue2.Text;
+                //ASPxGaugeControl2.Value = newValue;
+                //gauge.Gauges[0].ForceUpdateChildren();
+            }
+        }
+
+        private void UpdateScaleInternal5(ASPxGaugeControl gauge, float value)
+        {
+
+
+            string newValue;
+            DigitalGauge oldValue2 = (DigitalGauge)gauge.Gauges[0];
+            string oldValue;
+            oldValue = oldValue2.Text;
+            //Dennis: use a random value, just for demonstration purposes.
+            //DataView dv = SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView;
+            //float newValue = Convert.ToSingle(dv.Table.Rows[0][0]);
+
+            newValue = String.Format("{0:N3}", value);
+
+            if (oldValue != newValue)
+            {
+                oldValue2.Text = newValue;
+                ((DigitalGauge)gauge.Gauges[0]).Text = oldValue2.Text;
+                //ASPxGaugeControl2.Value = newValue;
+                //gauge.Gauges[0].ForceUpdateChildren();
+            }
+        }
+
+        private void UpdateScaleInternal7(ASPxGaugeControl gauge, string value)
+        {
+
+            int oldValue;
+            int newValue = 0;
+            string text = "";
+            
+            //Dennis: use a random value, just for demonstration purposes.
+            //DataView dv = SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView;
+            //float newValue = Convert.ToSingle(dv.Table.Rows[0][0]);
+
+            if (value == "Charging")
+            {
+                 newValue = 0;
+            }
+            else if (value == "Discharging")
+            {
+                newValue  = 1;
+            }
+            else if (value == "Standby")
+            {
+                newValue = 2;
+            }
+            else if (value == "Innactive")
+            {
+                newValue = 3;
+            }
+
+            oldValue = ((StateIndicatorGauge)gauge.Gauges[0]).Indicators[0].StateIndex;
+            
+            if (oldValue != newValue)
+            {
+                ((StateIndicatorGauge)gauge.Gauges[0]).Indicators[0].StateIndex = newValue;
+                ((StateIndicatorGauge)gauge.Gauges[0]).Labels[0].Text = value;
+                //ASPxGaugeControl2.Value = newValue;
+                //gauge.Gauges[0].ForceUpdateChildren();
+            }
+        }
 
 
         protected void ASPxGaugeControl1_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1);
+            UpdateGauge(1001,6);
         }
 
         protected void ASPxGaugeControl2_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(2);
+            UpdateGauge(1001, 6);
         }
 
         protected void ASPxGaugeControl3_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(3);
+            UpdateGauge(1001, 6);
+        }
+
+        protected void ASPxGaugeControl4_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
+        {
+            UpdateGauge(1001, 6);
+        }
+
+        protected void ASPxGaugeControl5_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
+        {
+            UpdateGauge(1001, 6);
+        }
+
+        protected void ASPxGaugeControl7_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
+        {
+            UpdateGauge(1001, 6);
         }
     }
 }

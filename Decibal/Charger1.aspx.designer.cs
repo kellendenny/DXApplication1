@@ -67,6 +67,15 @@ namespace Decibal {
         protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl5;
         
         /// <summary>
+        /// ASPxGaugeControl7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl ASPxGaugeControl7;
+        
+        /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>

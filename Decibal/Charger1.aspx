@@ -20,7 +20,7 @@
             <td style="text-align: center; width: 251px; height: 20px;">State of Charge</td>
             <td class="dxfm-filterViewDateCell" style="width: 242px; height: 20px; text-align: center;">Battery Capacity (mAh)</td>
             <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; text-align: center; width: 212px;">Battery Voltage (Vdc)</td>
-            <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; width: 191px; text-align: center;">Battery Current (Amps)</td>
+            <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; width: 191px; text-align: center;">Battery Current (mAmps)</td>
             <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px; width: 238px; text-align: center;">&nbsp;</td>
             <td class="dxflEmptyItem_MetropolisBlue" style="height: 20px">&nbsp;</td>
         </tr>
@@ -49,13 +49,13 @@
         </LayoutPadding>
     </dx:ASPxGaugeControl>
             </td>
-            <td class="dxfm-filterViewDateCell" style="width: 242px">
-                <dx:ASPxGaugeControl ID="ASPxGaugeControl2" runat="server" BackColor="White" Height="250px" Value="000,000" Width="237px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl2_CustomCallback" ClientInstanceName="gauge2" ShowLoadingPanel="False">
+            <td class="dxfm-filterViewDateCell" style="width: 242px; text-align: center;">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl2" runat="server" BackColor="White" Height="250px" Value="000,000" Width="178px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl2_CustomCallback" ClientInstanceName="gauge2" ShowLoadingPanel="False">
                     <SettingsLoadingPanel Enabled="False" />
                     <Gauges>
-                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 237, 250" DigitCount="6" Name="Gauge0" Padding="20, 20, 20, 20" Text="000,000">
+                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 237, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20" Text="000,000">
                             <backgroundlayers>
-                                <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="307.775, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
+                                <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="211.85, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
                             </backgroundlayers>
                         </dx:DigitalGauge>
                     </Gauges>
@@ -76,10 +76,10 @@
                 </dx:ASPxGaugeControl>
             </td>
             <td class="dxfm-filterViewDateCell" style="width: 191px; text-align: center;">
-                <dx:ASPxGaugeControl ID="ASPxGaugeControl4" runat="server" BackColor="White" Height="250px" Value="00,000" Width="179px" ShowLoadingPanel="False">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl4" runat="server" BackColor="White" Height="250px" Value="0" Width="179px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl4_CustomCallback" ClientInstanceName="gauge4" ShowLoadingPanel="False">
                     <SettingsLoadingPanel Enabled="False" />
                     <Gauges>
-                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 250, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20" Text="00,000">
+                        <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 179, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20">
                             <backgroundlayers>
                                 <dx:DigitalBackgroundLayerComponent AcceptOrder="-1000" BottomRight="211.85, 99.9625" Name="digitalBackgroundLayerComponent13" ShapeType="Style4" TopLeft="20, 0" ZOrder="1000" />
                             </backgroundlayers>
@@ -96,7 +96,7 @@
                 Charge Rate (C)</td>
             <td class="dxfm-filterViewDateCell" style="width: 242px; text-align: center;">
                 Battery Power (W)</td>
-            <td style="width: 212px">&nbsp;</td>
+            <td style="width: 212px; text-align: center;">Charger State</td>
             <td class="dxfm-filterViewDateCell" style="width: 191px">&nbsp;</td>
             <td style="width: 238px">&nbsp;</td>
             <td>&nbsp;</td>
@@ -123,7 +123,7 @@
                 </dx:ASPxGaugeControl>
             </td>
             <td class="dxfm-filterViewDateCell" style="width: 242px; text-align: center;">
-                <dx:ASPxGaugeControl ID="ASPxGaugeControl5" runat="server" BackColor="White" Height="250px" Value="00,000" Width="178px" ShowLoadingPanel="False">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl5" runat="server" BackColor="White" Height="250px" Value="00,000" Width="178px" ShowLoadingPanel="False" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl5_CustomCallback" ClientInstanceName="gauge5">
                     <SettingsLoadingPanel Enabled="False" />
                     <Gauges>
                         <dx:DigitalGauge AppearanceOff-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:#34000000&quot;/&gt;" AppearanceOn-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Bounds="0, 0, 250, 250" DigitCount="4" Name="Gauge0" Padding="20, 20, 20, 20" Text="00,000">
@@ -135,7 +135,28 @@
 <LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
                 </dx:ASPxGaugeControl>
             </td>
-            <td style="width: 212px">&nbsp;</td>
+            <td style="width: 212px; text-align: center;">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl7" runat="server" BackColor="White" Height="260px" Value="0" Width="177px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl7_CustomCallback" ClientInstanceName="gauge7">
+                    <Gauges>
+                        <dx:StateIndicatorGauge Bounds="0, 0, 177, 260" Name="Gauge0">
+                            <indicators>
+                                <dx:StateIndicatorComponent AcceptOrder="0" Center="124, 124" Name="stateIndicatorComponent2" Size="200, 200" StateIndex="0">
+                                    <states>
+                                        <dx:IndicatorStateWeb Name="Charging" ShapeType="CarBattery3" />
+                                        <dx:IndicatorStateWeb Name="Discharging" ShapeType="CarBattery1" />
+                                        <dx:IndicatorStateWeb Name="Standby" ShapeType="CarBattery2" />
+                                        <dx:IndicatorStateWeb Name="Innactive" ShapeType="CarBattery4" />
+                                    </states>
+                                </dx:StateIndicatorComponent>
+                            </indicators>
+                            <labels>
+                                <dx:LabelComponent AcceptOrder="1001" AppearanceText-Font="Arial, 24pt, style=Bold" AppearanceText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Black&quot;/&gt;" Name="Gauge0_Label1" Position="125, 250" Size="350, 50" Text="Charging" ZOrder="-1001" />
+                            </labels>
+                        </dx:StateIndicatorGauge>
+                    </Gauges>
+<LayoutPadding All="0" Left="0" Top="0" Right="0" Bottom="0"></LayoutPadding>
+                </dx:ASPxGaugeControl>
+            </td>
             <td class="dxfm-filterViewDateCell" style="width: 191px">&nbsp;</td>
             <td style="width: 238px">&nbsp;</td>
             <td>&nbsp;</td>
@@ -171,6 +192,6 @@
         </UpdateParameters>
     </asp:sqldatasource>
     <dx:ASPxTimer ID="timer" runat="server" Interval="5000" ClientInstanceName="timer">
-    <ClientSideEvents Tick="function(s, e) { timer.Stop(); gauge.PerformCallback(); gauge2.PerformCallback(); gauge3.PerformCallback(); }" />
+    <ClientSideEvents Tick="function(s, e) { timer.Stop(); gauge.PerformCallback(); }" />
     </dx:ASPxTimer>
 </asp:Content>
