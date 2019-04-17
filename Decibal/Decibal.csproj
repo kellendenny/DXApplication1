@@ -105,12 +105,16 @@
     <Content Include="Contact.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="Transactions.aspx" />
+    <Content Include="MarketData.aspx" />
+    <Content Include="DistributionFeeder.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="decibal - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\decibal - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\decibal - Web Deploy1.pubxml" />
@@ -209,6 +213,20 @@
     </Compile>
     <Compile Include="Transactions.aspx.designer.cs">
       <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarketData.aspx.cs">
+      <DependentUpon>MarketData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarketData.aspx.designer.cs">
+      <DependentUpon>MarketData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DistributionFeeder.aspx.cs">
+      <DependentUpon>DistributionFeeder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DistributionFeeder.aspx.designer.cs">
+      <DependentUpon>DistributionFeeder.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

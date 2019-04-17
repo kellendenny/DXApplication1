@@ -15,19 +15,33 @@
                 <dx:ASPxMenu ID="HeaderMenu" runat="server" ItemAutoWidth="False" Width="100%">
                     <items>
                         <dx:MenuItem Text="Home" NavigateUrl="~/Default.aspx"></dx:MenuItem>
-                        <dx:MenuItem Text="Dashboard" NavigateUrl="~/Overview.aspx"></dx:MenuItem>
-                        <dx:MenuItem Text="User Management" NavigateUrl="~/Users.aspx"></dx:MenuItem>
-                        <dx:MenuItem Name="Transactions" NavigateUrl="~/Transactions.aspx" Text="Transactions">
-                        </dx:MenuItem>
-                        <dx:MenuItem Text="Chargers">
+                        <dx:MenuItem Text="Manage">
                             <Items>
-                                <dx:MenuItem Text="Charger 1" NavigateUrl="~/Charger1.aspx">
+                                <dx:MenuItem NavigateUrl="~/Users.aspx" Text="User Management">
                                 </dx:MenuItem>
-                                <dx:MenuItem Text="Charger 2" NavigateUrl="~/Charger2.aspx">
+                                <dx:MenuItem Name="Transactions" NavigateUrl="~/Transactions.aspx" Text="Transactions">
                                 </dx:MenuItem>
-                                <dx:MenuItem Text="Charger 3" NavigateUrl="~/Charger3.aspx">
+                                <dx:MenuItem NavigateUrl="~/MarketData.aspx" Text="Market Data">
                                 </dx:MenuItem>
-                                <dx:MenuItem Text="Charger 4" NavigateUrl="~/Charger4.aspx">
+                                <dx:MenuItem NavigateUrl="~/DistributionFeeder.aspx" Text="Distribution Feeder">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="View Status" NavigateUrl="~/Overview.aspx">
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/Overview.aspx" Text="Dashboard">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Chargers">
+                                    <Items>
+                                        <dx:MenuItem NavigateUrl="~/Charger1.aspx" Text="Charger 1">
+                                        </dx:MenuItem>
+                                        <dx:MenuItem NavigateUrl="~/Charger2.aspx" Text="Charger 2">
+                                        </dx:MenuItem>
+                                        <dx:MenuItem NavigateUrl="~/Charger3.aspx" Text="Charger 3">
+                                        </dx:MenuItem>
+                                        <dx:MenuItem NavigateUrl="~/Charger4.aspx" Text="Charger 4">
+                                        </dx:MenuItem>
+                                    </Items>
                                 </dx:MenuItem>
                             </Items>
                         </dx:MenuItem>

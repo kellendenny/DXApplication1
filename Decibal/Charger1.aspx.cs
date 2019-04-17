@@ -161,7 +161,7 @@ namespace Decibal
             //DataView dv = SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView;
             //float newValue = Convert.ToSingle(dv.Table.Rows[0][0]);
 
-            newValue = String.Format("{0:N3}", value);
+            newValue = Convert.ToString(value);
 
             if (oldValue != newValue)
             {
@@ -230,7 +230,7 @@ namespace Decibal
             //DataView dv = SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView;
             //float newValue = Convert.ToSingle(dv.Table.Rows[0][0]);
 
-            newValue = String.Format("{0:N3}", value);
+            newValue = Convert.ToString(value);
 
             if (oldValue != newValue)
             {

@@ -95,7 +95,7 @@
             <td class="dxspdtDesignMode" style="width: 251px; text-align: center;">
                 Charge Rate (C)</td>
             <td class="dxfm-filterViewDateCell" style="width: 242px; text-align: center;">
-                Battery Power (W)</td>
+                Battery Power (mW)</td>
             <td style="width: 212px; text-align: center;">Charger State</td>
             <td class="dxfm-filterViewDateCell" style="width: 191px">&nbsp;</td>
             <td style="width: 238px">&nbsp;</td>
@@ -137,6 +137,7 @@
             </td>
             <td style="width: 212px; text-align: center;">
                 <dx:ASPxGaugeControl ID="ASPxGaugeControl7" runat="server" BackColor="White" Height="260px" Value="0" Width="177px" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl7_CustomCallback" ClientInstanceName="gauge7">
+                    <SettingsLoadingPanel Enabled="False" />
                     <Gauges>
                         <dx:StateIndicatorGauge Bounds="0, 0, 177, 260" Name="Gauge0">
                             <indicators>
