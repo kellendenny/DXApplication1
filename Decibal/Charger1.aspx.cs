@@ -16,50 +16,61 @@ using System.Web.UI;
 
 namespace Decibal
 {
+    
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public Object[] data = new object[10];
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack && !IsCallback)
             {
-                UpdateGauge(1001,6);
+                UpdateData(1001);
             }
         }
-        
-        private void UpdateGauge(int ID, int total)
+
+        public void UpdateData(int ID)
         {
-            Object[] data = GetData(ID);
+           data = GetData(ID);
+        }
+
+        private void UpdateGauge(int total)
+        {
             float newValue = 0;
             string newString = "";
-            if (total >= 1)
+            if (total == 1)
             {
                 newValue = (float)data.GetValue(4);
                 UpdateScaleInternal(ASPxGaugeControl1, newValue);
             }                             
-            if (total >= 2)
+            if (total == 2)
             {
                 newValue = (float)data.GetValue(3);
                 UpdateScaleInternal2(ASPxGaugeControl2, newValue);
             }
-            if (total >= 3)
+            if (total == 3)
             {
                 newValue = (float)data.GetValue(6);
                 UpdateScaleInternal3(ASPxGaugeControl3, newValue);
             }
-            if (total >= 4)
+            if (total == 4)
             {
                 newValue = (float)data.GetValue(7);
                 UpdateScaleInternal4(ASPxGaugeControl4, newValue);
             }
-            if (total >= 5)
+            if (total == 5)
             {
                 newValue = (float)data.GetValue(8);
                 UpdateScaleInternal5(ASPxGaugeControl5, newValue);
             }
-            if (total >= 6)
+            if (total == 6)
             {
                 newString = (string)data.GetValue(5);
                 UpdateScaleInternal7(ASPxGaugeControl7, newString);
+            }
+            if (total == 7)
+            {
+                newValue = (float)data.GetValue(9);
+                UpdateScaleInternal6(ASPxGaugeControl6, newValue);
             }
         }
 
@@ -118,17 +129,7 @@ namespace Decibal
             return values;
         }
 
-           
-
-
-            
-
-
-
-
-
-
-        
+          
         private void UpdateScaleInternal(ASPxGaugeControl gauge, float value)
         {
 
@@ -279,35 +280,66 @@ namespace Decibal
             }
         }
 
+        private void UpdateScaleInternal6(ASPxGaugeControl gauge, float value)
+        {
+
+
+            float newValue;
+            float oldValue = ((LinearGauge)gauge.Gauges[0]).Scales[0].Value;
+            //Dennis: use a random value, just for demonstration purposes.
+            //DataView dv = SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView;
+            //float newValue = Convert.ToSingle(dv.Table.Rows[0][0]);
+
+            newValue = value;
+
+            if (oldValue != newValue)
+            {
+                ((LinearGauge)gauge.Gauges[0]).Scales[0].Value = newValue;
+                gauge.DataBind();
+            }
+        }
+
 
         protected void ASPxGaugeControl1_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1001,6);
+            UpdateData(1001);
+            UpdateGauge(1);
         }
 
         protected void ASPxGaugeControl2_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1001, 6);
+            UpdateData(1001);
+            UpdateGauge(2);
         }
 
         protected void ASPxGaugeControl3_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1001, 6);
+            UpdateData(1001);
+            UpdateGauge(3);
         }
 
         protected void ASPxGaugeControl4_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1001, 6);
+            UpdateData(1001);
+            UpdateGauge(4);
         }
 
         protected void ASPxGaugeControl5_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1001, 6);
+            UpdateData(1001);
+            UpdateGauge(5);
         }
 
         protected void ASPxGaugeControl7_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
         {
-            UpdateGauge(1001, 6);
+            UpdateData(1001);
+            UpdateGauge(6);
+        }
+
+        protected void ASPxGaugeControl6_CustomCallback(object source, DevExpress.Web.CallbackEventArgsBase e)
+        {
+            UpdateData(1001);
+            UpdateGauge(7);
         }
     }
 }

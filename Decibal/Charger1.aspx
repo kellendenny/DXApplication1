@@ -103,7 +103,7 @@
         </tr>
         <tr>
             <td class="dxspdtDesignMode" style="width: 251px">
-                <dx:ASPxGaugeControl ID="ASPxGaugeControl6" runat="server" BackColor="White" Height="262px" Value="1" Width="258px" ShowLoadingPanel="False">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl6" runat="server" BackColor="White" Height="262px" Value="1" Width="258px" ShowLoadingPanel="False" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl6_CustomCallback" ClientInstanceName="gauge6">
                     <SettingsLoadingPanel Enabled="False" />
                     <Gauges>
                         <dx:LinearGauge Bounds="0, 0, 258, 262" Name="lGauge1">
@@ -192,6 +192,6 @@
         </UpdateParameters>
     </asp:sqldatasource>
     <dx:ASPxTimer ID="timer" runat="server" Interval="5000" ClientInstanceName="timer">
-    <ClientSideEvents Tick="function(s, e) { timer.Stop(); gauge.PerformCallback(); }" />
+    <ClientSideEvents Tick="function(s, e) { timer.Stop(); gauge.PerformCallback(); gauge2.PerformCallback(); gauge3.PerformCallback(); gauge4.PerformCallback(); gauge5.PerformCallback(); gauge6.PerformCallback(); gauge7.PerformCallback(); }" />
     </dx:ASPxTimer>
 </asp:Content>
