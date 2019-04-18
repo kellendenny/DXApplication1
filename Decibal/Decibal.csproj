@@ -103,6 +103,8 @@
     <Content Include="Hardware.aspx" />
     <Content Include="Algorithm.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Pictures\transformer.jpg" />
+    <Content Include="Pictures\transformer.png" />
     <Content Include="Users.aspx" />
     <Content Include="Transactions.aspx" />
     <Content Include="MarketData.aspx" />

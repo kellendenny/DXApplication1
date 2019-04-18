@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Transactions.aspx.cs" Inherits="Decibal.WebForm10" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:decibal.ece8803ConnectionString2 %>" SelectCommand="SELECT [RecordID], [RecordTime], [UserID], [TransactionFinal], [ChargerActive], [StartTime], [EndTime], [EstimatedMinToCharge], [BatteryCapacity], [BatteryCurrentSoC], [BatteryMinCharge], [BatteryMaxCharge], [UserMaxCost], [UserNetCost], [UserNetEnergy], [UserCurrentPriceMultiplier] FROM [Transactions]" DeleteCommand="DELETE FROM [Transactions] WHERE [RecordID] = @RecordID" InsertCommand="INSERT INTO [Transactions] ([RecordTime], [UserID], [TransactionFinal], [ChargerActive], [StartTime], [EndTime], [EstimatedMinToCharge], [BatteryCapacity], [BatteryCurrentSoC], [BatteryMinCharge], [BatteryMaxCharge], [UserMaxCost], [UserNetCost], [UserNetEnergy], [UserCurrentPriceMultiplier]) VALUES (@RecordTime, @UserID, @TransactionFinal, @ChargerActive, @StartTime, @EndTime, @EstimatedMinToCharge, @BatteryCapacity, @BatteryCurrentSoC, @BatteryMinCharge, @BatteryMaxCharge, @UserMaxCost, @UserNetCost, @UserNetEnergy, @UserCurrentPriceMultiplier)" UpdateCommand="UPDATE [Transactions] SET [RecordTime] = @RecordTime, [UserID] = @UserID, [TransactionFinal] = @TransactionFinal, [ChargerActive] = @ChargerActive, [StartTime] = @StartTime, [EndTime] = @EndTime, [EstimatedMinToCharge] = @EstimatedMinToCharge, [BatteryCapacity] = @BatteryCapacity, [BatteryCurrentSoC] = @BatteryCurrentSoC, [BatteryMinCharge] = @BatteryMinCharge, [BatteryMaxCharge] = @BatteryMaxCharge, [UserMaxCost] = @UserMaxCost, [UserNetCost] = @UserNetCost, [UserNetEnergy] = @UserNetEnergy, [UserCurrentPriceMultiplier] = @UserCurrentPriceMultiplier WHERE [RecordID] = @RecordID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:decibal.ece8803ConnectionString2 %>" SelectCommand="SELECT [RecordID], [RecordTime], [UserID], [TransactionFinal], [ChargerActive], [StartTime], [EndTime], [EstimatedMinToCharge], [BatteryCapacity], [BatteryCurrentSoC], [BatteryMinCharge], [BatteryMaxCharge], [UserMaxCost], [UserNetCost], [UserNetEnergy], [UserCurrentPriceMultiplier], [ControllerID], [ChargerID] FROM [Transactions]" DeleteCommand="DELETE FROM [Transactions] WHERE [RecordID] = @RecordID" InsertCommand="INSERT INTO [Transactions] ([RecordTime], [UserID], [TransactionFinal], [ChargerActive], [StartTime], [EndTime], [EstimatedMinToCharge], [BatteryCapacity], [BatteryCurrentSoC], [BatteryMinCharge], [BatteryMaxCharge], [UserMaxCost], [UserNetCost], [UserNetEnergy], [UserCurrentPriceMultiplier], [ControllerID], [ChargerID]) VALUES (@RecordTime, @UserID, @TransactionFinal, @ChargerActive, @StartTime, @EndTime, @EstimatedMinToCharge, @BatteryCapacity, @BatteryCurrentSoC, @BatteryMinCharge, @BatteryMaxCharge, @UserMaxCost, @UserNetCost, @UserNetEnergy, @UserCurrentPriceMultiplier, @ControllerID, @ChargerID)" UpdateCommand="UPDATE [Transactions] SET [RecordTime] = @RecordTime, [UserID] = @UserID, [TransactionFinal] = @TransactionFinal, [ChargerActive] = @ChargerActive, [StartTime] = @StartTime, [EndTime] = @EndTime, [EstimatedMinToCharge] = @EstimatedMinToCharge, [BatteryCapacity] = @BatteryCapacity, [BatteryCurrentSoC] = @BatteryCurrentSoC, [BatteryMinCharge] = @BatteryMinCharge, [BatteryMaxCharge] = @BatteryMaxCharge, [UserMaxCost] = @UserMaxCost, [UserNetCost] = @UserNetCost, [UserNetEnergy] = @UserNetEnergy, [UserCurrentPriceMultiplier] = @UserCurrentPriceMultiplier, [ControllerID] = @ControllerID, [ChargerID] = @ChargerID WHERE [RecordID] = @RecordID">
         <DeleteParameters>
             <asp:Parameter Name="RecordID" Type="Int32" />
         </DeleteParameters>
@@ -20,6 +20,8 @@
             <asp:Parameter Name="UserNetCost" Type="Single" />
             <asp:Parameter Name="UserNetEnergy" Type="Single" />
             <asp:Parameter Name="UserCurrentPriceMultiplier" Type="Single" />
+            <asp:Parameter Name="ControllerID" Type="Int32" />
+            <asp:Parameter Name="ChargerID" Type="Int32" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="RecordTime" Type="DateTime" />
@@ -37,6 +39,8 @@
             <asp:Parameter Name="UserNetCost" Type="Single" />
             <asp:Parameter Name="UserNetEnergy" Type="Single" />
             <asp:Parameter Name="UserCurrentPriceMultiplier" Type="Single" />
+            <asp:Parameter Name="ControllerID" Type="Int32" />
+            <asp:Parameter Name="ChargerID" Type="Int32" />
             <asp:Parameter Name="RecordID" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
@@ -92,6 +96,10 @@
         <dx:GridViewDataTextColumn FieldName="UserNetEnergy" VisibleIndex="15">
         </dx:GridViewDataTextColumn>
         <dx:GridViewDataTextColumn FieldName="UserCurrentPriceMultiplier" VisibleIndex="16">
+        </dx:GridViewDataTextColumn>
+        <dx:GridViewDataTextColumn FieldName="ControllerID" VisibleIndex="17">
+        </dx:GridViewDataTextColumn>
+        <dx:GridViewDataTextColumn FieldName="ChargerID" VisibleIndex="18">
         </dx:GridViewDataTextColumn>
     </Columns>
 </dx:ASPxGridView>

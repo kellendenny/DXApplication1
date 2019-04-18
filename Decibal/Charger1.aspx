@@ -103,12 +103,12 @@
         </tr>
         <tr>
             <td class="dxspdtDesignMode" style="width: 251px">
-                <dx:ASPxGaugeControl ID="ASPxGaugeControl6" runat="server" BackColor="White" Height="262px" Value="1" Width="258px" ShowLoadingPanel="False" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl6_CustomCallback" ClientInstanceName="gauge6">
+                <dx:ASPxGaugeControl ID="ASPxGaugeControl6" runat="server" BackColor="White" Height="262px" Value="0.4" Width="258px" ShowLoadingPanel="False" EnableClientSideAPI="True" OnCustomCallback ="ASPxGaugeControl6_CustomCallback" ClientInstanceName="gauge6">
                     <SettingsLoadingPanel Enabled="False" />
                     <Gauges>
                         <dx:LinearGauge Bounds="0, 0, 258, 262" Name="lGauge1">
                             <scales>
-                                <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Silver&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-ShapeOffset="7" MajorTickmark-ShapeType="Linear_Style10_1" MajorTickmark-TextOffset="35" MaxValue="2" MinorTickCount="4" MinorTickmark-ShapeOffset="7" MinorTickmark-ShapeType="Linear_Style10_2" Name="scale1" StartPoint="62.5, 230" Value="1">
+                                <dx:LinearScaleComponent AcceptOrder="0" AppearanceMajorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMajorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-BorderBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceMinorTickmark-ContentBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:White&quot;/&gt;" AppearanceTickmarkText-TextBrush="&lt;BrushObject Type=&quot;Solid&quot; Data=&quot;Color:Silver&quot;/&gt;" EndPoint="62.5, 20" MajorTickCount="6" MajorTickmark-ShapeOffset="7" MajorTickmark-ShapeType="Linear_Style10_1" MajorTickmark-TextOffset="35" MaxValue="0.4" MinorTickCount="4" MinorTickmark-ShapeOffset="7" MinorTickmark-ShapeType="Linear_Style10_2" Name="scale1" StartPoint="62.5, 230" Value="0.4">
                                 </dx:LinearScaleComponent>
                             </scales>
                             <levels>
