@@ -22,6 +22,15 @@ namespace Decibal {
         protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl MarketCost;
         
         /// <summary>
+        /// DemandReduction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl DemandReduction;
+        
+        /// <summary>
         /// Image1 control.
         /// </summary>
         /// <remarks>
@@ -31,15 +40,6 @@ namespace Decibal {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// FeederReduction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTrackBar FeederReduction;
-        
-        /// <summary>
         /// FeederLoad control.
         /// </summary>
         /// <remarks>
@@ -47,6 +47,33 @@ namespace Decibal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGauges.ASPxGaugeControl FeederLoad;
+        
+        /// <summary>
+        /// ASPxTextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox ASPxTextBox1;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// timer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer timer;
         
         /// <summary>
         /// CarState1 control.
